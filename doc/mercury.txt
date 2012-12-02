@@ -1,0 +1,78 @@
+*Mercury.txt*               Mercury Compiler Support Plugins
+                            $HGLastChangedDate: 2012-12-02 13:27 +0400 $
+                            Author: Sergey Khorev <sergey.khorev@gmail.com>
+
+1. Overview                                         |mercury-overview|
+2. Installation                                     |mercury-installation|
+3. Filetype plugin                                  |mercury-ftplugin|
+4. Mercury commands plugin                          |mercury-commands|
+5. Syntax highlighting                              |mercury-syntax|
+6. Customisation                                    |mercury-customisation|
+
+=============================================================================
+1. Overview                                            *mercury-overview*
+
+This is a set of Vim plugins to simplify work with Mercury language compiler
+(http://www.mercury.csse.unimelb.edu.au)
+
+Native Mercury installer for Windows can be found here: 
+http://code.google.com/p/winmercury
+
+=============================================================================
+2. Installation                                         *mercury-install*
+
+The plugins com as a vimball; to install it, simply >
+       vim Mercury.vba
+       :so %
+       :q
+<
+Your .vimrc needs to have: >
+   	set nocp
+	filetype plugin on
+<
+
+=============================================================================
+3. Filetype plugin                                      *mercury-ftplugin*
+
+It is a modified version of |ftplugin| from officical Mercury distribution
+It allows using |:make| to invoke mmake and sets some formatting options.
+If you like keeping *.err files open in Vim, the plugin also removes "file
+changed" prompt for them.
+
+=============================================================================
+4. Mercury commands plugin              *mercury-commands* *mercury_commands*
+
+mercury_commands |plugin| provides additional functionality via Vim commands:
+                                                                    *:Mmc*
+:Mmc [arg1]...      Invoke compiler (mmc), using current file when no
+                    arguments passed.
+                                                                    *:Mmake*
+:Mmake [arg1]...    Invoke mmake (mmake.bat on Windows).
+                                                                    *:Mmerr*
+:Mmerr              Show last output from :Mmc or :Mmake.
+                                                                    *:Mmod*
+:Mmod name [interface_imports]
+:Mmod name {interfaceimports} [implementation_imports]
+                    Insert module template, interface_imports and
+                    implementation_imports are comma-separated lists
+                    of modules. E.g., >
+        :Mmod mymodule char,list io,store
+<
+                                                                    *:Mmain*
+:Mmain name [interface_imports]
+:Mmain name {interfaceimports} [implementation_imports]
+                    Insert module template containing the `main' predicate
+
+
+=============================================================================
+5. Syntax highlighting                                      *mercury-syntax*
+
+That is |syntax-highlighting| plugin from official Mercury distribution.
+
+=============================================================================
+6. Customisation                                      *mercury-customisation*
+
+If you have several compilers installed, you can set g:mercury_home or 
+b:mercury_home variable to point to specific installation directory
+
+ vim:tw=78:ts=8:ft=help:norl:
