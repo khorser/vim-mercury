@@ -1,7 +1,9 @@
 " Commands for Mercury compiler (http://www.mercury.csse.unimelb.edu.au)
 " Native Mercury installer for Windows: http://code.google.com/p/winmercury
-" Last Change: $HGLastChangedDate: 2012-12-02 13:27 +0400 $
+" Last Change: $HGLastChangedDate$
 " URL: http://www.vim.org/scripts/script.php?script_id=2920
+"      https://bitbucket.org/khorser/vim-mercury
+"      https://github.com/khorser/vim-mercury
 " Maintainer:  Sergey Khorev <sergey.khorev@gmail.com>
 
 " EXPORTED COMMANDS:

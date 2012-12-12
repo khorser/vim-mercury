@@ -1,6 +1,10 @@
 *Mercury.txt*               Mercury Compiler Support Plugins
-                            $HGLastChangedDate: 2012-12-02 13:27 +0400 $
+                            $HGLastChangedDate$
                             Author: Sergey Khorev <sergey.khorev@gmail.com>
+
+http://www.vim.org/scripts/script.php?script_id=2920
+https://bitbucket.org/khorser/vim-mercury
+https://github.com/khorser/vim-mercury
 
 1. Overview                                         |mercury-overview|
 2. Installation                                     |mercury-installation|
